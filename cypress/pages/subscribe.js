@@ -3,10 +3,10 @@ class Subscribe {
         const selectors = {
             firstName: "[name='firstName']",
             lastName: "[name='lastName']",
-            userName: "[name='userName']",
+            userName: "[name='username']",
             password: "[name='password']",
             confirmPassword: "[name='confirmPassword']",
-            submitForm: '.SignUpForm-form',
+            submitForm: ('[data-test="signup-submit"]'),
             bankName: "[name='bankName']",
             routingNumber: "[name='routingNumber']",
             accountNumber: "[name='accountNumber']",
