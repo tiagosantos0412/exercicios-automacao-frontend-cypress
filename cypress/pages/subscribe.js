@@ -15,6 +15,10 @@ class Subscribe {
         return selectors
     }
 
+    accessSubscribe(){
+        cy.visit('signup')
+    }
+
     subscribeUser(firstName, lastName, userName, password){
         cy.get(this.selectorsList().firstName).clear().type(firstName)
         cy.get(this.selectorsList().lastName).clear().type(lastName)
