@@ -30,3 +30,16 @@ describe('realworld-app Tests', ()=>{
     )
   })
 })
+
+describe('realworld-app Tests',()=>{
+  it('New user subscribe - Fail', ()=>{
+    subscribe.accessSubscribe()
+    subscribe.subscribeUser(
+      userData.subscribeFail.firstName,
+      userData.subscribeFail.lasName,
+      userData.subscribeFail.userName,
+      userData.subscribeFail.password,
+      userData.subscribeFail.confirmPassword
+    )
+  })
+})

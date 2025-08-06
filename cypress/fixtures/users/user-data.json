@@ -6,5 +6,12 @@
     "userFail": {
       "userName": "teste",
       "password": "teste"
+    },
+    "subscribeFail": {
+      "firstName": "user",
+      "lasName": "tester",
+      "userName": "tuser_1",
+      "password": "123",
+      "confirmPassword": "123"
     }
 }
