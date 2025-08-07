@@ -21,7 +21,7 @@ class Subscribe {
         cy.get(this.selectorsList().userName).clear().type(userName)
         cy.get(this.selectorsList().password).clear().type(password)
         cy.get(this.selectorsList().confirmPassword).clear().type(password)
-        cy.get(this.selectorsList().submitForm).click()
+        cy.get(this.selectorsList().submitForm).click({force: true})
     }
 }
 export default Subscribe

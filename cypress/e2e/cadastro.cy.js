@@ -28,7 +28,7 @@ const bankInfoUpdate = {
 }
 
 describe('realworld-app Tests', ()=>{
-  it.only('New user subscribe - Success', ()=>{
+  it('New user subscribe - Success', ()=>{
     subscribe.accessSubscribe()
     subscribe.subscribeUser(
       signupData.firstName,
