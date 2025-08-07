@@ -9,11 +9,17 @@ const dashboard = new Dashboard()
 describe('realworld-app Tests', ()=>{
   it('Login Success', ()=>{
     login.accesLogin()
-    login.loginWithAnyUser(userData.userSuccess.userName, userData.userSuccess.password)
+    login.loginWithAnyUser(
+      userData.userSuccess.userName, 
+      userData.userSuccess.password
+    )
     dashboard.checkDashboardPage()
   })
   it('Login Fail', ()=>{
     login.accesLogin()
-    login.loginWithWrongUser(userData.userFail.userName, userData.userFail.password)
+    login.loginWithWrongUser(
+      userData.userFail.userName, 
+      userData.userFail.password
+    )
   })
 })

@@ -3,6 +3,7 @@ import Subscribe from '../pages/subscribe'
 import Login from '../pages/login'
 
 const subscribe = new Subscribe()
+const login = new Login()
 //Load Chance
 const Chance = require('chance')
 //Instanciate Chance
