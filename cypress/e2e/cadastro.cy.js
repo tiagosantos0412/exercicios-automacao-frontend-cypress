@@ -28,7 +28,7 @@ const bankInfoUpdate = {
 }
 
 describe('realworld-app Tests', ()=>{
-  it('New user subscribe - Success', ()=>{
+  it.only('New user subscribe - Success', ()=>{
     subscribe.accessSubscribe()
     subscribe.subscribeUser(
       signupData.firstName,
@@ -42,6 +42,7 @@ describe('realworld-app Tests', ()=>{
       signupData.userName,
       signupData.password
     )
+    login.clickNextButton()
     bankInfo.editBanckInfo(
       bankInfoUpdate.bankName,
       bankInfoUpdate.routingNumber,

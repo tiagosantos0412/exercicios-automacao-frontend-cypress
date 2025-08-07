@@ -5,6 +5,7 @@ class Login {
             password: '[name=password]',
             loginButton: '[type=submit]',
             wrongAlert: '.MuiAlert-standardError',
+            nextButton: "[data-test='user-onboarding-next']",
         }
         return selectors
     }
@@ -24,6 +25,10 @@ class Login {
         cy.get(this.selectorsList().password).type(password)
         cy.get(this.selectorsList().loginButton).click()
         cy.get(this.selectorsList().wrongAlert)
+    }
+
+    clickNextButton(){
+        cy.get(this.selectorsList().nextButton).click()
     }
 }
 
