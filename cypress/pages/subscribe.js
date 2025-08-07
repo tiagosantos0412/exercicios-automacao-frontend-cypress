@@ -7,10 +7,6 @@ class Subscribe {
             password: "[name='password']",
             confirmPassword: "[name='confirmPassword']",
             submitForm: ('[data-test="signup-submit"]'),
-            bankName: "[name='bankName']",
-            routingNumber: "[name='routingNumber']",
-            accountNumber: "[name='accountNumber']",
-            saveBankAccount: '.BankAccountForm-submit',
         }
         return selectors
     }

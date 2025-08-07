@@ -1,9 +1,11 @@
 import userData from '../fixtures/users/user-data.json'
 import Subscribe from '../pages/subscribe'
 import Login from '../pages/login'
+import BankInfo from '../pages/bankInfo'
 
 const subscribe = new Subscribe()
 const login = new Login()
+const bankInfo = new BankInfo()
 //Load Chance
 const Chance = require('chance')
 //Instanciate Chance
@@ -19,6 +21,12 @@ const signupData = {
   confirmPassword: password
 }
 
+const bankInfoUpdate = {
+  bankName: chance.company(),
+  routingNumber: chance.string({length: 9, alpha: false, numeric: true}),
+  accountNumber: chance.string({length: 9, alpha: false, numeric: true}),
+}
+
 describe('realworld-app Tests', ()=>{
   it('New user subscribe - Success', ()=>{
     subscribe.accessSubscribe()
@@ -28,6 +36,16 @@ describe('realworld-app Tests', ()=>{
       signupData.userName,
       signupData.password,
       signupData.confirmPassword
+    )
+    //login.accesLogin()
+    login.loginWithAnyUser(
+      signupData.userName,
+      signupData.password
+    )
+    bankInfo.editBanckInfo(
+      bankInfoUpdate.bankName,
+      bankInfoUpdate.routingNumber,
+      bankInfoUpdate.accountNumber
     )
   })
 })
