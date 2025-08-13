@@ -13,5 +13,9 @@
       "userName": "tuser_1",
       "password": "123",
       "confirmPassword": "123"
+    },
+    "transactionUser":{
+      "userName": "user_135",
+      "password": "user@000"
     }
 }
