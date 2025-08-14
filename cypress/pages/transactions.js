@@ -29,7 +29,7 @@ class Transactions {
         cy.get(this.selectorsList().selectContact).click()
         cy.get(this.selectorsList().amount).clear().type(amount)
         cy.get(this.selectorsList().description).clear().type(description)
-        cy.get(this.selectorsList().request).click()
+        cy.get(this.selectorsList().payment).click()
         cy.get(this.selectorsList().confirmTransaction).should('be.visible')
     }
 }

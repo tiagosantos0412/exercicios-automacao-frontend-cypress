@@ -15,12 +15,12 @@ var chance = new Chance()
 const transactionInfo = {
   paymentAmount: chance.floating({ min: 10, max: 1000, fixed: 2 }),
   paymentDescription: chance.word(),
-  requestAmount: chance.floating({ min: -150, max: -20000, fixed:2 }),
+  rquestAmount: chance.floating({ min: -50000, max: 0, fixed: 2 }),
   requestDescription: chance.word()
 }
 
 describe('realworld-app Tests', ()=>{
-  it('Transaction Payment', ()=>{
+  it.only('Transaction Payment', ()=>{
     login.accesLogin()
     login.loginWithAnyUser(
       userData.transactionUser.userName, 
@@ -39,9 +39,9 @@ describe('realworld-app Tests', ()=>{
       userData.transactionUser.password
     )
     dashboard.checkDashboardPage()
-    transaction.executeNewTransactionPayment(
-      transactionInfo.amount,
-      transactionInfo.description
+    transaction.executeNewTransactionRequest(
+      transactionInfo.paymentAmount,
+      transactionInfo.paymentDescription
     )
   })
 })
