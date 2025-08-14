@@ -5,7 +5,7 @@ class Transactions {
             startNewTransaction: "[data-test='nav-top-new-transaction']",
             selectContact: "[data-test='user-list-item-60VgqV5Q_']",
             amount: "[name='amount']",
-            description: "[name='description']",
+            description: "#transaction-create-description-input",
             request: "[data-test='transaction-create-submit-request']",
             payment: "[data-test='transaction-create-submit-payment']",
             returnToTransactions: "[data-test='new-transaction-return-to-transactions']",
@@ -13,17 +13,6 @@ class Transactions {
             confirmTransaction: ".MuiAlert-message",
         }
         return selectors
-    }
-
-    checkPositiveBalance(){
-        cy.get(this.selectorsList().userBalance).invoke('text')
-        .then((textBalance) =>{
-            const numericBalance = parseFloat(
-                textBalance.replace('$', '').replace(/\./g, '').replace(',', '.')
-            )
-            return numericBalance
-        })
-        
     }
 
     executeNewTransactionPayment(amount, description){

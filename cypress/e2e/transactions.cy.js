@@ -13,12 +13,26 @@ const Chance = require('chance')
 var chance = new Chance()
 
 const transactionInfo = {
-  amount: chance.floating({ min: 10, max: 1000, fixed: 2 }),
-  description: chance.word()
+  paymentAmount: chance.floating({ min: 10, max: 1000, fixed: 2 }),
+  paymentDescription: chance.word(),
+  requestAmount: chance.floating({ min: -150, max: -20000, fixed:2 }),
+  requestDescription: chance.word()
 }
 
 describe('realworld-app Tests', ()=>{
-  it('Login Success', ()=>{
+  it('Transaction Payment', ()=>{
+    login.accesLogin()
+    login.loginWithAnyUser(
+      userData.transactionUser.userName, 
+      userData.transactionUser.password
+    )
+    dashboard.checkDashboardPage()
+    transaction.executeNewTransactionPayment(
+      transactionInfo.paymentAmount,
+      transactionInfo.paymentDescription
+    )
+  })
+    it('Transaction Request', ()=>{
     login.accesLogin()
     login.loginWithAnyUser(
       userData.transactionUser.userName, 
