@@ -1,12 +1,12 @@
 class Dashboard {
     selectorList(){
         const selectors = {
-            dashboardGrid: '.MuiPaper-elevation1',
+            dashboardGrid: "[data-test='sidenav-user-balance']",
         }
         return selectors
     }
     checkDashboardPage(){
-        cy.get(this.selectorList().dashboardGrid)
+        cy.get(this.selectorList().dashboardGrid).should('be.visible')
     }
 }
 export default Dashboard
