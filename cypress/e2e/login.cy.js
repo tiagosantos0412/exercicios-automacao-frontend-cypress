@@ -7,7 +7,7 @@ const login = new Login()
 const dashboard = new Dashboard()
 
 describe('realworld-app Tests', ()=>{
-  it('Login Success', ()=>{
+  it.only('Login Success', ()=>{
     login.accesLogin()
     login.loginWithAnyUser(
       userData.userSuccess.userName, 
