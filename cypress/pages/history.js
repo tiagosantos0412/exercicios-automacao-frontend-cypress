@@ -1,9 +1,9 @@
-class Transactions {
+class HistoryTransactions {
     selectorList(){
         const selectors = {
             historyButton: '[data-test="nav-personal-tab"]',
             containTrainsaction: '[data-test="transaction-item-e1iMrgVWp"]',
-            noTransactionMessage: "'[data-test='empty-list-header'] > .MuiTypography-root'",
+            noTransactionMessage: "[data-test='empty-list-header']",
         }
         return selectors
     }
@@ -20,4 +20,4 @@ class Transactions {
 
 }
 
-export default Transactions
+export default HistoryTransactions

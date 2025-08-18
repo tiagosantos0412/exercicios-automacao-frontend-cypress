@@ -17,5 +17,9 @@
     "transactionUser":{
       "userName": "user_116",
       "password": "user@000"
+    },
+    "historyUserFail":{
+      "userName": "user_95",
+      "password": "user@000"
     }
 }
